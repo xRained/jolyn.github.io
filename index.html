@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Jolyn</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments"></span><br />
+			<span class="space"></span><span class="comments">Sorry na</span><br />
+<span class="space"></span><span class="comments">pu :&lt;</span><br />
+			'lam mo ba nung una kitang nakita is 'di na talaga kita trip kasi ang taray mo???<br />
+			ta's kada titignan mo ako parang jinudge mo na buong pagkatao ko.<br />
+			<span class="comments">nung tumayo ako sa harapan </span><br />
+			para kang disgusted or what sa akin?<br />
+			<span class="comments">nung birthday mo, binati kita through fb nga lang.</span><br />
+			then sa comment section tayo nag usap na parang mga weirdo.;<br />
+			we talked a lot<br />
+			then suddenly natapos nalang ang lahat.<br />
+			I don't really know that time kung crush na ba kita or what.<br />
+			pero when we talked ulit? I was able to organize my thoughts and shits.<br />
+			yep, I did like you and now I do love you. :&lt;<br />
+			<span class="comments">'di na ba kaya ng sorry?</span><br />
+			feel q kaya pa naman ih.<br />
+			<br>
+			<br>
+			eon na eon<br />
+			ay wuv yuuuuuu<br />
+			<br>
+			<br>
+			'wag mo bubuksan 'to.<br />
+			<br>
+			<span id="heartspan">
+			<a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					It was around this time nung una kitang nakita.
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					<p>I love you :&lt;</p>
+					<div class="signature">-ej</div>
+				</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2019, 5, 24);
+together.setHours(16);
+together.setMinutes(30);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
